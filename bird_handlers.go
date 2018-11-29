@@ -16,7 +16,6 @@ var birds []Bird
 // To get all birds
 func getBirdHandler(w http.ResponseWriter, r *http.Request) {
 	// Convert the "birds" variable to json
-	fmt.Print("birds: ", birds)
 	birdListBytes, err := json.Marshal(birds)
 
 	// If there is an error, print it to the console, and return a server
@@ -33,8 +32,6 @@ func getBirdHandler(w http.ResponseWriter, r *http.Request) {
 
 // To create a new entry of birds
 func createBirdHandler(w http.ResponseWriter, r *http.Request) {
-	// Wtf is r?
-	fmt.Print("rrrrr: ", r)
 
 	// Create a new instance of Bird
 	bird := Bird{}
@@ -59,11 +56,7 @@ func createBirdHandler(w http.ResponseWriter, r *http.Request) {
 	// Append our existing list of birds with a new entry
 	birds = append(birds, bird)
 
-	// Is birds an array of objects? Bet ya it is ;)
-	fmt.print("birds: ", birds)
-
 	// Finally, we redirect the user to the original HTMl page
 	// (located at `/assets/`), using the http libraries `Redirect` method
 	http.Redirect(w, r, "/assets/", http.StatusFound)
-
 }
