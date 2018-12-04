@@ -1,0 +1,29 @@
+.title {
+    font-family: 'Lobster';
+    font-size: 50px;
+    text-align: center;
+    color: #adbfc3;
+}
+
+body {
+    background-color: #395563;
+    padding: 50px;
+}
+
+.vg-btn {
+    display: block !important;
+    margin-left: auto !important;
+    margin-right: auto !important; 
+}
+
+.vg-parent {
+    display: flex;
+    margin: 5px;
+    flex-wrap: wrap;
+}
+
+.vg-space {
+    margin: 10px;
+    width: 200px;
+    min-width: 800px;
+}
